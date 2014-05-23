@@ -1,0 +1,38 @@
+
+<script type="text/javascript"> 
+completeURL = window.location;
+document.write(completeURL);
+</script> 
+
+<!--To get the current URL in the parts you requested you can use the following: -->
+
+<script type="text/javascript"> 
+//sample url = vader.samplesite.com/light/saber/ 
+fullDomain = window.location.host; 
+//this will give you javascript.samplesite.com 
+domainArray = fullDomain.split('.'); 
+//this splits your domain in pieces using the "." 
+subDomain=domainArray[0]; 
+document.write(subDomain); 
+//this will give you the subdomain portion ie vader 
+domain=domainArray[1]; 
+document.write(domain); 
+//get and print the domain name only ie samplesite 
+domainExt=domainArray[2]; 
+document.write(domainExt); 
+//get and print the domain extension ie com 
+urlPath=window.location.pathname; 
+document.write(urlPath); 
+//get and print the portion of your url after the domain extension ie /light/saber/ 
+</script> 
+
+<!--If you would like to get a specific portion of your urlPath then this can be achieved using the JavaScript Split method once more but with a minor adjustment. -->
+<script type="text/javascript"> 
+// this will give you your path ie /light/saber/ 
+urlPath=window.location.pathname; 
+//this splits your url in pieces using the / as a separator 
+urlPathArray = urlPath.split('/'); 
+//get the first section of your path ie light 
+urlPath1=urlPathArray[1]; 
+document.write(urlPath1); 
+</script> 

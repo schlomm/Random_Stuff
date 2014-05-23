@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title> - jsFiddle demo</title>
+	<script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/data.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	<!-- Additional files for the Highslide popup effect -->
+	<script type="text/javascript" src="http://www.highcharts.com/media/com_demo/highslide-full.min.js"></script>
+	<script type="text/javascript" src="http://www.highcharts.com/media/com_demo/highslide.config.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.highcharts.com/media/com_demo/highslide.css" />
+	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+	</div><style type='text/css'></style>
+    
+	<script type='text/javascript'>
+    $(function () {
+    	$(document).ready(function () {
+
+    		$(document).ready(function () {
+    			function requestData() {
+    				$.ajax({
+    					url : 'getData.php',
+    					datatype : 'json',
+    					success : function (data) {
+    						alert(data);
+    						chart.series[0].setData(data[0]);
+    					},
+    					cache : false
+    				});
+    			}
+
+    			var chart;
+    			//Chart bits
+    			chart = new Highcharts.Chart({
+    					chart : {
+    						renderTo : 'container',
+    						type : 'line',
+    						events : {
+    							load : requestData
+    						}
+    					},
+						title: {
+							text: 'Line Chart'
+						},
+    					xAxis: {
+							type: 'datetime',
+							minRange: 1 * 24 * 3600000 // one day
+						},
+    					yAxis : {
+    						title : {
+    							text : 'Value'
+    						}
+    					},
+						legend: {
+							enabled: true
+						},
+    					series : [{
+    							name : 'Random data',
+    							data : [0]
+    						}
+    					]
+    				});
+    		});
+    	});
+    });
+  </script>
+  </head>
+  <body></body>
+</html>
