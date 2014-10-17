@@ -4,19 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hello 1"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -76.2890625,
-          35.17380831799959
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Hello 2"
       },
       "geometry": {
@@ -126,8 +113,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.734374999999999,
-          33.7243396617476
+          -32.16796875,
+          38.8225909761771
         ]
       }
     },
@@ -139,8 +126,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -34.1015625,
-          52.26815737376817
+          -63.45703124999999,
+          56.559482483762245
         ]
       }
     },
@@ -152,21 +139,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.5546875,
-          69.53451763078358
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Hello 13"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.21875,
-          69.90011762668541
+          -4.39453125,
+          56.84897198026975
         ]
       }
     }
