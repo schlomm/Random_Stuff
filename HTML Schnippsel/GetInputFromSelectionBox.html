@@ -1,0 +1,37 @@
+<<!DOCTYPE html>
+<html>
+<body>
+    <form>Select your favorite fruit:
+        <!--<select id="attr_select" onclick="myFunction()">-->
+        <!--<select id="attr_select" onchange=myFunction()">-->
+        <select id="attr_select" onchange="myFunction()">
+            <option value="GESAMTP">Gesamt</option>
+            <option value="VERKEHR">Verkehrsanbindung</option>
+            <option value="GESUNDH">Gesundheit</option>
+            <option value="SENIORE">Seniorenbetreuung</option>
+            <option value="ERHOLUN">Erholung</option>
+            <option value="BILDUNG">Bildung</option>
+            <option value="ARBEITS">Arbeitsmarkt</option>
+            <option value="SICHERH">Sicherheit</option>
+            <option value="WOHNANG">Wohnungsangebot</option>
+            <option value="WOHNKOS">Kosten des Wohnens</option>
+        </select>
+    </form>
+    <p>Click the button to return the value of the selected fruit.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <div id="demo"></div>
+    <p> Diese Demo zeigt, wie man den Inhalt aus einer SelectionBox wie BUtton oder wie "onChange" in ein anderes Div bekommt.</p>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("attr_select").value;
+            document.getElementById("demo").innerHTML = x;
+
+            switch (x) {
+        		case "GESAMTP":
+			        x = "Test";
+                break;
+        }
+        }
+    </script>
+</body>
+</html>
